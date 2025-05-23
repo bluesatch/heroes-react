@@ -3,7 +3,7 @@ const HeroForm =(props)=> {
     return(
         <main className="main" id="heroFormMain">
             <div className="container">
-                <form className="hero-form form" onClick={ props.handleClick }>
+                <form className="hero-form form" onSubmit={ props.handleClick }>
                     <div className="row mb-3">
                         <div className="col">
                             <label htmlFor="heroName" className="form-label">Hero Name</label>
