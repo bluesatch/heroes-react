@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useParams } from 'react-router'
+import { useParams, Link } from 'react-router'
 import axios from 'axios'
 
 import HeroCard from "./HeroCard"
@@ -13,8 +13,10 @@ const AllHeroes =(props)=> {
     const params = useParams()
 
     useEffect(()=> {
+        setTable(props.table)
         setHeading(props.table)
     }, [])
+
 
     useEffect(()=> {
 
@@ -51,6 +53,9 @@ const AllHeroes =(props)=> {
         <main className="main" id="allHeroesMain">
             <div className="container">
                 <h2 className="text-capitalize heroes-heading">{heading}</h2>
+                <p className="text-end">
+                    <Link to="/heroForm">Add a Hero</Link>
+                </p>
                 <section className="row row-cols-1 row-cols-md-4 row-cols-lg-5 g-4">
                     { cardComponents }
                 </section> 
