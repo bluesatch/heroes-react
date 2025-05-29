@@ -27,7 +27,6 @@ const AllData =( {table, name} )=> {
         )
     })
 
-    console.log(allDataCardComponents)
 
     return (
         <main className="main" id="franchiseMain">
